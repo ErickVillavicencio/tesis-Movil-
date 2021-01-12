@@ -1,0 +1,7 @@
+{
+  "name": "RutasPersonalizadas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

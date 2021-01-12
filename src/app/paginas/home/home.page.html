@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title>Bienvenido: {{usuario}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="proceso_salir()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="map"></div>
+  <div id="divMenu">
+    <table id="menu" >
+      <tr>
+        <td>
+          <ion-button color="light" (click)="crearRutaPag()">
+            <ion-icon name="add-circle"></ion-icon>
+          </ion-button>
+        </td>
+        <td>
+          <ion-button color="light">
+            <ion-icon name="home"></ion-icon>
+          </ion-button>
+        </td>
+        <td>
+          <ion-button color="light" (click)="misRutasPag()">
+            <ion-icon name="list"></ion-icon>
+          </ion-button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

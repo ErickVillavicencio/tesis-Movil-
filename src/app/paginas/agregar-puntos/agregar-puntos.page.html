@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-title>Ruta: {{nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <table class="filtros">
+    <tr>
+      <td> <div class="content-select">
+        <select [(ngModel)]="parroquiaSeleccionada" >
+          <option value="null"> Parroquia </option>
+          <option *ngFor="let parroquias of parroquias" [value]="parroquias.id"> {{ parroquias.descripcion }} </option>
+        </select>
+      </div>
+       <!-- {{parroquiaSeleccionada}}-->
+      </td>
+    
+      <td>
+        <div class="content-select">
+          <select [(ngModel)]="categoriaSeleccionada" (ngModelChange)="putSubCategoria(categoriaSeleccionada)" >
+            <option value="null"> Categoria </option>
+            <option *ngFor="let categorias of categorias" [value]="categorias.id"> {{ categorias.descripcion }} </option>
+          </select>
+        </div>
+          <!--{{categoriaSeleccionada}}-->
+      </td>
+    
+      <td>
+        <div class="content-select">
+          <select [(ngModel)]="subCategoriaSeleccionada" >
+            <option value="null"> Sub Categoria </option>
+            <option *ngFor="let subCategorias of subCategorias" [value]="subCategorias.id"> {{ subCategorias.descripcion }} </option>
+          </select>
+        </div>
+          <!--{{subCategoriaSeleccionada}}-->
+      </td>  
+      <td >    
+        <button ion-button class="boton" (click)="filtrar()">
+          <ion-icon style="width: 30px; height: 30px;" name="search"></ion-icon>
+        </button>
+      </td>
+    </tr>
+    </table>
+
+  <div id="map"></div>
+
+  <div id="menu">
+    <ion-button color="light" (click)="generarRuta()">
+      Generar Ruta
+    </ion-button>
+  </div>
+</ion-content>

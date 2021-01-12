@@ -1,0 +1,55 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title>Crear Ruta </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="proceso_inicio()"></ion-button>
+      <ion-icon name="arrow-back"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+<h1>Nueva Ruta</h1>
+
+
+  <ion-list>
+
+
+      <ion-item>  
+        <ion-label>Nombre de la Ruta:</ion-label>   
+        <ion-input type="text"  [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+        
+      <ion-item>
+        <ion-label>Fecha Inicio</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD"  [(ngModel)]="fechaInicio"  ></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Hora Inicio:</ion-label>
+        <ion-input type="time" [(ngModel)]="horaInicio"></ion-input>
+      </ion-item>
+        
+      <ion-item>
+      <ion-label>Numero de Adultos:</ion-label>
+      <ion-input type="number"  min="0" max="99"  [(ngModel)]="numeroAdultos"></ion-input>
+    </ion-item>  
+    
+    <ion-item>
+      <ion-label>Numero de Niños:</ion-label>
+      <ion-input type="number"  min="0" max="99"  [(ngModel)]="numeroNinios"></ion-input>
+    </ion-item>
+  
+  
+  <ion-button expand="full" class="no-paddig" color="success" (click)="tryRegistrarRuta()" [disabled]="disableButton">
+    Guardar</ion-button>
+  
+  
+  </ion-list>
+  
+  
+  </ion-content>
+  

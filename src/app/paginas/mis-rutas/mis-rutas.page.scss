@@ -1,0 +1,42 @@
+.divRuta{
+
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #efefef13;
+}
+
+.rutas{
+    margin-top: 10xp;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;    
+    font-size: 11px;
+    text-align: center;
+}
+
+#customers {
+    border-collapse: collapse;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #42d77d;
+    color: white;
+  }
+
+  .boton{
+      background: transparent;
+      border: none !important;
+  }

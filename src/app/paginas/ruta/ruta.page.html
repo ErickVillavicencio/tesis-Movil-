@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Ruta: {{nombreRuta}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="proceso_mis_rutas()"></ion-button>
+      <ion-icon name="arrow-back"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  
+      <div id="map"></div>
+
+
+      <div id="listaPuntos">
+
+
+      <ion-slides pager="true">
+
+<ion-slide class="contenedorItinerario">   
+
+<table class="itinerario" >
+  <caption class="primero" >Itinerario</caption>
+  <tr class="segundo">
+    <td class="fila" colspan="5" class="informativo"><p>Hora Inicio: {{inicioh}}</p>   </td>
+  </tr>
+  <tr class="primero">
+      <th><p>Atractivo</p></th>
+      <th><p>Recorrido</p></th>
+      <th><p>Inicio</p></th>
+      <th><p>Fin</p></th>
+  </tr>
+<tr *ngFor="let data of data" class="segundo">
+  <td class="fila">
+    <p> {{data["punto"]}}</p>    
+  </td>
+  <td class="fila">
+    <p>{{data["tiempo"]}}</p>
+  </td>
+  <td >
+    <p>{{data["inicio"]}}</p>
+  </td>
+  <td class="fila">
+    <p>{{data["fin"]}}</p>
+  </td>
+</tr>
+
+<tr class="primero">
+  <td colspan="5" class="informativo"><p>Hora Fin: {{finh}}</p>   </td>
+</tr>
+</table>   
+</ion-slide>
+
+<ion-slide class="contenedorItinerario2">   
+
+  <table class="itinerario2">
+
+    <caption class="primero">Tiempo de Recorrido entre Atractivos</caption>
+
+    <tr class="primero">
+        <th><p>Atractivos</p></th>
+        <th><p>Tiempo</p></th>
+        <th><p>Recorido</p></th>
+        <th><p>Distancia</p></th>
+        
+    </tr>
+
+  <tr *ngFor="let data1 of data1" class="segundo">
+    <td class="fila"><p>{{data1["inicio"]}}</p>  {{data1["fin"]}}</td>
+    <td class="fila">
+      
+        <p>{{data1["horas"]}} h </p>
+        <p>{{data1["minutos"]}} min</p>
+          <p>{{data1["segundos"]}} s</p>
+        
+    </td>
+    <td class="fila">{{data1["recorrido"]}}</td>
+    <td class="fila">{{data1["distancia"]}}</td>
+  </tr>
+  </table>    
+  </ion-slide>
+          </ion-slides>
+
+        </div>
+
+
+</ion-content>

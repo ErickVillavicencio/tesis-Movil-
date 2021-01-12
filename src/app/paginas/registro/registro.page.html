@@ -1,0 +1,49 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title>Registrar</ion-title>
+
+<ion-buttons slot="start">
+<ion-back-button></ion-back-button>
+</ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+  <div class="">
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nombres " [(ngModel)]="nombres"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Apellidos " [(ngModel)]="apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Correo" [(ngModel)]="correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+    <ion-input type="text" placeholder="Nombre de Usuario" [(ngModel)]="usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Contraseña" [(ngModel)]="clave"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="Confirme su Contraseña" [(ngModel)]="claveconf"></ion-input>
+  </ion-item>
+</div>
+
+<ion-button expand="full" class="no-paddig" color="success" (click)="tryRegistrar()" [disabled]="disableButton">
+  Registrarse</ion-button>
+
+
+</ion-list>
+
+
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title>Mis Rutas</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="proceso_inicio()"></ion-button>
+      <ion-icon name="arrow-back"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div class="espacio">
+  <br>
+</div>
+<div class="divRuta">
+
+  <table class="rutas" id="customers" border="1" > 
+    <tr>
+        <th><p>Nombre</p></th>
+        <th><p>Inicio</p></th>
+        <th><p>Fin </p></th>
+        <th><p>Costo</p></th>
+        <th><p>Accion</p></th>
+    </tr>
+
+  <tr *ngFor="let rutas of rutas">
+    <td >
+      <p> {{rutas["nombre"]}}</p>    
+    </td>
+    <td class="fila">
+      <p>{{rutas["horaInicio"]}}</p>
+    </td>
+    <td >
+      <p>{{rutas["horaFin"]}}</p>
+    </td>
+    <td class="fila">
+      <p>{{rutas["costoTotal"]}}</p>
+    </td>
+    <td> <p>
+        <button ion-button class="boton" 
+        (click)="proceso_ver(rutas.id, rutas.nombre, 
+        rutas.horaInicio, 
+        rutas.numeroAdultos, rutas.numeroNinios)" >
+          <ion-icon name="eye"></ion-icon>
+        </button>
+      </p>
+    <p>
+        <button ion-button class="boton"
+        (click)="proceso_actualizar(rutas.id,rutas.nombre, 
+        rutas.horaInicio, 
+        rutas.numeroAdultos, rutas.numeroNinios)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </p>
+    <p>   
+      <button ion-button class="boton"
+      (click)="proceso_eliminar(rutas.id)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </p>
+    </td>
+  </tr> 
+
+  </table> 
+</div>
+
+
+</ion-content>

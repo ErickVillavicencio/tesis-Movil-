@@ -1,0 +1,58 @@
+
+
+#map {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;  
+  margin-top: 5%;
+  min-height: 50%;
+  }
+
+  #listaPuntos{
+    width: 100%;
+    margin-right: 2.5%;
+    margin-left: 2.5;
+  }
+
+  .contenedorItinerario{
+    text-align: center; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    font-size: 12px;
+}
+
+.contenedorItinerario2{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+  font-size: 12px;
+}
+
+.itinerario{
+  font-size: 10;
+}
+.itinerario2{
+  font-size: 9;
+}
+
+.informativo{
+  border-color: #1F2739;
+  color: rgb(209, 209, 214);   
+}
+
+.fila{
+  width: 97px;
+  margin-right: 1.5px;
+  margin-left: 1.5px;  
+}
+
+.primero{
+  background-color: #1F2739;  
+}
+
+.segundo{
+  background-color: #283249;
+}
